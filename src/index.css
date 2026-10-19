@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #060B14;
+    --bg-secondary: #0B132B;
+    --blue-primary: #2563EB;
+    --blue-neon: #38BDF8;
+    --text-white: #F0F9FF;
+    --text-muted: #94A3B8;
+    --border-dark: #1E293B;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-white);
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Pixel font utility */
+  .font-pixel {
+    font-family: 'Press Start 2P', monospace, sans-serif;
+  }
+
+  .font-display {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  /* Custom pixelated rendering for canvas and pixel imagery */
+  .pixelated {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Subtle pixel grid background - Blue Cyber Aesthetic */
+.pixel-grid-bg {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.05) 1px, transparent 1px);
+}
+
+.pixel-grid-dense {
+  background-size: 16px 16px;
+  background-image: 
+    linear-gradient(to right, rgba(56, 189, 248, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
+}
+
+/* Pixel Card & Button Frame */
+.pixel-box {
+  box-shadow: 0 0 0 1px #1E293B, 4px 4px 0 0 rgba(11, 19, 43, 0.9);
+}
+
+.pixel-box-neon {
+  box-shadow: 0 0 0 1px #38BDF8, 4px 4px 0 0 #1E293B;
+}
+
+.pixel-btn-primary {
+  box-shadow: 3px 3px 0 0 #1E3A8A;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pixel-btn-primary:hover {
+  box-shadow: 4px 4px 0 0 #1D4ED8;
+  transform: translate(-1px, -1px);
+}
+
+.pixel-btn-primary:active {
+  box-shadow: 1px 1px 0 0 #1E3A8A;
+  transform: translate(2px, 2px);
+}
+
+.pixel-btn-secondary {
+  box-shadow: 3px 3px 0 0 #0B132B;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pixel-btn-secondary:hover {
+  box-shadow: 4px 4px 0 0 #1E293B;
+  transform: translate(-1px, -1px);
+}
+
+.pixel-btn-secondary:active {
+  box-shadow: 1px 1px 0 0 #0B132B;
+  transform: translate(2px, 2px);
+}
+
+/* Custom retro scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #060B14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border: 1px solid #0B132B;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #38BDF8;
+}
+
+/* Smooth motion respect */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

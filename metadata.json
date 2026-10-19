@@ -1,0 +1,6 @@
+{
+  "name": "PT Indo Kreasi - Game Development Studio",
+  "description": "Official website for PT Indo Kreasi, an interactive game development studio crafting retro-futuristic pixel art worlds and interactive digital experiences.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
